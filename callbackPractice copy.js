@@ -1,16 +1,16 @@
 /* In this repo your job is to write functions to make each function call work properly.
-Below is a sample problem
+Below is a sample problem 
 
   //code here for sayHi
 
    sayHi('Hi Katie', function(thingToSay){
       alert(thingToSay);
    });
+   
 
-
-and what you should write is the sayHi function that makes the code above work,
-
-
+and what you should write is the sayHi function that makes the code above work, 
+    
+    
    var sayHi = function(str, cb){
     cb(str);
    }
@@ -18,21 +18,20 @@ and what you should write is the sayHi function that makes the code above work,
    sayHi('Hi Katie', function(thingToSay){
       alert(thingToSay); //should alert ('Hi Katie')'
    });
-
-
+    
+    
 */
 
 
 
   //Code Here for first
-function first(name, callback){
-  return callback(name[0]);
-}
+  
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
   console.log('The first name in names is ' + firstName)
 });
+
 
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
@@ -41,10 +40,6 @@ first(names, function(firstName){
 
 
   //Code Here for last
-function last(name,callback){
-  return callback(name[name.length-1]);
-}
-
 
 last(names, function(lastName){
   console.log('The last name in names is ' + lastName);
@@ -62,10 +57,6 @@ last(names, function(lastName){
 
 
   //Code Here for multiply
-  function multiply(a,b,callback){
-    return callback(a*b);
-
-  }
 
 multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
@@ -82,15 +73,6 @@ multiply(4, 3, function(answer){
 
 
   //Code Here for contains
-
-  function contains(name, lookup,callback){
-    if(name.indexOf(lookup) > -1){
-      return callback(true);
-    }
-    else{
-      return callback(false);
-    }
-  }
 
 contains(names, 'Colt', function(result){
   if(result === true){
@@ -111,16 +93,6 @@ contains(names, 'Colt', function(result){
 
     //Code Here for uniq
 
-    function uniq(arr,callback){
-      var newArray=[];
-      for (var i = 0;i<arr.length;i++){
-          if(newArray.indexOf(arr[i]) === -1){
-            newArray.push(arr[i]);
-        }
-      }
-      return callback(newArray);
-    }
-
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
 });
@@ -135,11 +107,6 @@ uniq(names, function(uniqArr){
 
 
     //Code Here for each
-function each(name,callback){
-  for (var i = 0; i < name.length; i++){
-    callback(name[i],i);
-  }
-}
 
 each(names, function(item, indice){
   console.log('The item in the ' + indice + ' position is ' + item)
@@ -156,14 +123,6 @@ each(names, function(item, indice){
 
 
  //code here for getUserById
-function getUserById(list,id,callback){
-for (var i = 0; i < list.length; i++) {
-  if(list[i].id === id){
-    return callback(list[i]);
-
-  }
-}
-}
 
 var users = [
   {
@@ -187,5 +146,5 @@ var users = [
 ];
 
 getUserById(users, '16t', function(user){
-  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address);
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address); 
 });
